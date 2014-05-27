@@ -1,0 +1,41 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face
+{
+	font-family: SM;
+	src: url('../font/yasashi.ttf');
+}
+
+@font-face
+{
+    font-family: descript;
+    src: url('../font/wt005.ttf');
+}
+
+@font-face
+{
+    font-family: navi;
+    src: url('../font/SC.ttf')
+}
+
+@font-face
+{
+    font-family: flipflop;
+    src: url('../font/FLIPFLOP.TTF')
+}
+
+ul
+{
+	list-style-type:none;
+	overflow: hidden;
+}
+
+li
+{
+	/*float: left*/
+}
+

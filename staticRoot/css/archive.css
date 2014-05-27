@@ -1,0 +1,48 @@
+#archive
+{
+    position: relative;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-top: 5px;
+    width: 1190px;
+    height: 100%;
+	display: none;
+}
+
+.year_title
+{
+	width: 100%;
+	font-size: 2em;
+	background-color: #303030 ;
+	padding: 5px;
+	color: White;
+	font-family: flipflop;
+	text-align: center;
+}
+
+.archive_list
+{
+	width: 350px;
+	margin-top: 10px;
+	margin-bottom:5px;
+	margin-right: 10px;
+	float: left;
+	box-shadow: 0px 0px 5px #909090 ;
+}
+.archive_month
+{
+	background-color: #303030 ;
+	color: white;
+	font-size: 2em;
+	padding: 5px;
+}
+.archive_content
+{
+	background-color: #E8E8E8 ;
+	font-size: 15px;
+	padding: 5px;
+	line-height: 20px;
+}
+
+.tagList_link:link{color:#3399FF; text-decoration:none;}
+.tagList_link:visited{color:#3399FF; text-decoration:none;}
