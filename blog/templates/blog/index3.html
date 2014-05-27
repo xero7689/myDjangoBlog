@@ -1,0 +1,26 @@
+{% extends 'base3.html' %}
+<!-- TITLE -->
+{% block title %}PETERさんの部屋{% endblock %}
+
+<!-- CONTENT -->
+{% block content %}
+<div id="post">
+{% for post in allPubPosts %}
+{% if post.published %}
+<div class="index_article">
+	<div class="index_article_background"></div>
+    <div class="article_header">
+        <a class="article_title_link" href="{{post.get_absolute_url}}">{{post.title}}</a>
+        </br><time class="article_time" datetime="{{post.created|date:'c'}}">{{post.created|date:'D d M'}}</time>
+        {% for tag in post.tags.all %}<a class="article_tag" href="{{tag.get_absolute_url}}">{{tag.tagName}}</a>{% endfor %}
+    </div>
+    <div class="article_content">
+        {{post.content|safe}}
+    </div>
+    <div class="continue"><a class="continue_link" href="{{post.get_absolute_url}}">Continue</a></div>
+</div>
+{% endif %}
+{% endfor %}
+</div>
+{% endblock %}
+

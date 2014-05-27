@@ -1,0 +1,20 @@
+{% extends 'base3.html' %}
+<!-- TITLE -->
+{% block title %}PETERさんの部屋{% endblock %}
+
+<!-- CONTENT -->
+{% block content %}
+<div id="tag_Post_List">
+<div id="tag_Post_List_header">
+<div id="tag_Post_List_title">TAG: {{tagName}}</div>
+</div>
+<div id="tag_Post_List_Content">
+<ul>
+{% for post in tagPost %}
+<li><a class="tagPostItem" href="{{post.get_absolute_url}}">{{post.title}}</a></li>
+{% endfor %}
+<ul>
+</div>
+</div>
+{% endblock %}
+

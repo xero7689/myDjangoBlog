@@ -1,0 +1,32 @@
+{% extends 'base3.html' %}
+<!-- TITLE -->
+{% block title %}Peter's Work{% endblock %}
+
+<!-- CONTENT -->
+<!-- Right now is only one album -->
+{% block content %}
+<div id="img_preview_window">
+	<!--<p id="img_log"></p>-->
+	<div id="img_preview"></div>
+</div>
+
+<div id="work" class="container">
+	<div id="work_left_button" class="work_button"></div>
+	<div id="work_right_button" class="work_button"></div>
+	<div id="img_set">
+	{% for img in image %}
+		<div class="image item">
+		<div class="image_header">{{img.title}}</div>
+		<img class="image_thumb" height="200px" src="{{media_url}}/mywork/thumbnail/{{img.filename}}" data-img-href="{{media_url}}/mywork/{{img.filename}}" data-img-width="{{img.width}}" data-img-height="{{img.height}}"/>
+		</div>
+	{% endfor %}
+	</div>
+</div>
+
+
+<script>
+
+</script>
+{% endblock %}
+
+

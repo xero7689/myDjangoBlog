@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}/css/global.css">
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}/css/tag.css">
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}/css/hikaru.css">
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}/css/hikaru_post.css">
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}/css/hikaru_index_article.css">
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}/css/about.css">
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}/css/work.css">
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}/css/taglist.css">
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}/css/contactform.css">
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}/css/archive.css">
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}/css/tag_post.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="{{STATIC_URL}}/js/masonry.pkgd.min.js"></script>
+<script src="{{STATIC_URL}}/js/imagesloaded.pkgd.min.js"></script>
+<script src="{{STATIC_URL}}/js/hikaru.js"></script>
+<script src="{{STATIC_URL}}/js/work.js"></script>
+<meta charset="utf-8">
+<title>	{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+
+<div id="main">
+
+<!-- HEADER -->
+<div id="header">
+    <div id="blog_title"><a class="blog_title_link" href="/">PETERさんの小宇宙</a></div>
+    <div id="blog_description">想像力無極限！</div>
+</div>
+
+
+
+<!-- Left_Bar -->
+<div id="left_panel">
+
+<div id="navi">
+<!-- BLOG -->
+<div class="left_panel_widget">
+	<a class = "left_panel_link" href="/"><div class="left_panel_widget_title">BLOG</div></a>
+    <div class="left_panel_widget_content">
+    </div>
+</div>
+
+<!-- ABOUT -->
+<div class="left_panel_widget">
+	<a class = "left_panel_link" href="/about/"><div class="left_panel_widget_title">ABOUT</div></a>
+    <div class="left_panel_widget_content">
+    </div>
+</div>
+
+<!-- WORK -->
+<div class="left_panel_widget">
+	<a class = "left_panel_link" href="/work/"><div class="left_panel_widget_title">WORK</div></a>
+    <div class="left_panel_widget_content">
+    </div>
+</div>
+
+<!-- tagList -->
+<div class="left_panel_widget">
+<a class = "left_panel_link" href="/taglist/"><div class="left_panel_widget_title">TAG</div></a>
+<div class="left_panel_widget_content">
+<ul>
+{%for tag in allTags%}<li><a class="index_tag_list" href="{{tag.get_absolute_url}}">{{tag.tagName}}</a></li>{% endfor %}
+</ul>
+</div>
+</div>
+
+<!-- ARCHIVE -->
+<div class="left_panel_widget">
+<a class = "left_panel_link" href="/archive/"><div class="left_panel_widget_title">ARCHIVE</div></a>
+<div class="left_panel_widget_content">
+</div>
+</div>
+
+<div class="left_panel_widget">
+	<a class = "left_panel_link" href="/contact/"><div class="left_panel_widget_title">CONTACT</div></a>
+    <div class="left_panel_widget_content">
+    </div>
+</div>
+</div>
+</div>
+<!-- Header_HyperStructure -->
+<div class="header_hyper_structure"></div>
+
+{%block widget%}
+{%endblock%}
+
+<!-- CONTENT -->
+<div id="content">
+{% block content %}
+{% endblock %}
+</div>
+
+<div id="copy_right"><span id="designer">Site Design by Peter Lee. 2014</span></div>
+</div>
+</body>
+</html>

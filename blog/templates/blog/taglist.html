@@ -1,0 +1,15 @@
+{% extends "base3.html" %}
+
+{% block content%}
+<!-- I use the post_article's Css attribute here :p -->
+<div id="tag_list">
+<div id="tag_list_header">
+<div id="tag_list_title">TAG LIST</div>
+</div>
+<div id="tag_list_content">
+	{% for tag in object_list %}
+		<a class="tagList_link" href="{{tag.get_absolute_url}}" style='font-size:{{tag.tag_font_size}}px;'>{{tag.tagName}}</a>
+	{% endfor %}
+</div>
+</div>
+{% endblock %}
