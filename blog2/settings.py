@@ -1,3 +1,5 @@
+#This version is for online server : )
+
 """
 Django settings for blog2 project.
 
