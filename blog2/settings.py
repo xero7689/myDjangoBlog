@@ -87,7 +87,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 #Modify your static root path here.
-STATIC_ROOT = '/home/xero/code-project/Django_Project/blog2/staticRoot/'
+STATIC_ROOT = '/home/xero7689/blog2/staticRoot/'
 
 TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'))
 STATICFILES_DIRS=(os.path.join(BASE_DIR, 'static'),)
