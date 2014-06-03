@@ -50,10 +50,19 @@ color:white;
 .work_button:hover
 {
 	-webkit-animation:nextButton 1s infinite; /* Chrome, Safari, Opera */
+	-mox-animation:nextButton 1s infinite; /*firefox*/
 }
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes nextButton
+{
+0%   {opacity: 0.5;}
+50%  {opacity: 0.9;}
+100% {opacity: 0.5;}
+}
+
+/* Firefox */
+@-moz-keyframes nextButton
 {
 0%   {opacity: 0.5;}
 50%  {opacity: 0.9;}
