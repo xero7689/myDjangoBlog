@@ -11,7 +11,9 @@
 <div id="tag_Post_List_Content">
 <ul>
 {% for post in tagPost %}
+{% if post.published %}
 <li><a class="tagPostItem" href="{{post.get_absolute_url}}">{{post.title}}</a></li>
+{% endif %}
 {% endfor %}
 <ul>
 </div>
