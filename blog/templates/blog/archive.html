@@ -6,6 +6,7 @@
 {% block content %}
 	<div id="archive">
 	{%for year, months in archive.items%}
+		<div class="archive_item">
 		<div class="year_title">YEAR - {{year}}</div>
 		{% for month in months%}
 			<div class="archive_list">
@@ -13,12 +14,13 @@
 				<div class="archive_month">{{month}}月</div>
 			</div>
 			{% for post in allPubPosts %}
-				{% if post.created.month == month  %}
+				{% if post.created.month == month and post.created.year == year  %}
 					<div class="archive_content"><a class="tagList_link" href={{post.get_absolute_url}}>{{post.created|date:"d"}}-{{post.title}}</a></div>
 				{% endif %}
 			{% endfor %}
 			</div>
 		{%endfor%}
+		</div>
 	{%endfor%}
 	</div>
 {% endblock %}

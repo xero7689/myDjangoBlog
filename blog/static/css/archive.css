@@ -6,7 +6,11 @@
     margin-top: 5px;
     width: 1190px;
     height: 100%;
-	display: none;
+    display: none;
+}
+.archive_item
+{
+	overflow: hidden;
 }
 
 .year_title

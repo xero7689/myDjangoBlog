@@ -2,14 +2,13 @@
 {
     background-color: #E8E8E8 ;
     width: 390px;
-	margin-top: 9px;
-	margin-right: 5px;
-	margin-left: 5px;
+    margin-top: 9px;
+    margin-right: 5px;
+    margin-left: 5px;
     max-height: 450px;
     line-height: 25px;
     overflow:hidden;
     float: left;
-    box-shadow: 0px 0px 10px #909090 ;
 }
 
 .post_article

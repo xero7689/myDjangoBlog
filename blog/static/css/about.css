@@ -7,7 +7,6 @@
     width: 1190px;
     height: 100%;
 
-    font-family: SM;
     background-color: #E8E8E8;
     overflow: hidden;
     display: none;
@@ -43,4 +42,5 @@
 {
     margin: 10px;
     color: #282828 ;
+    font-family: "Microsoft JhengHei", monospace
 }
