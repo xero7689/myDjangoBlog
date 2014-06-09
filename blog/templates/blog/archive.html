@@ -6,6 +6,7 @@
 {% block content %}
 	<div id="archive">
 	{%for year, months in archive.items%}
+		<div class="archive_item">
 		<div class="year_title">YEAR - {{year}}</div>
 		{% for month in months%}
 			<div class="archive_list">
@@ -19,6 +20,7 @@
 			{% endfor %}
 			</div>
 		{%endfor%}
+		</div>
 	{%endfor%}
 	</div>
 {% endblock %}
