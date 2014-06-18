@@ -28,26 +28,26 @@
 
 <!-- HEADER -->
 <div id="header">
-    <div id="blog_title"><a class="blog_title_link" href="/">PETERさんの小宇宙</a></div>
+    <div id="blog_title"><a class="blog_title_link" href="/blog/">PETERさんの小宇宙</a></div>
     <div id="blog_description">想像力無極限！</div>
 </div>
 
 
 
-<!-- Left_Bar -->
+<!-- TOP_Bar -->
 <div id="left_panel">
 
 <div id="navi">
 <!-- BLOG -->
 <div class="left_panel_widget">
-	<a class = "left_panel_link" href="/"><div class="left_panel_widget_title">BLOG</div></a>
+	<a class = "left_panel_link" href="/blog/"><div class="left_panel_widget_title">BLOG</div></a>
     <div class="left_panel_widget_content">
     </div>
 </div>
 
 <!-- ABOUT -->
 <div class="left_panel_widget">
-	<a class = "left_panel_link" href="/about/"><div class="left_panel_widget_title">ABOUT</div></a>
+	<a class = "left_panel_link" href="/blog/about/"><div class="left_panel_widget_title">ABOUT</div></a>
     <div class="left_panel_widget_content">
     </div>
 </div>
@@ -61,7 +61,7 @@
 
 <!-- tagList -->
 <div class="left_panel_widget">
-<a class = "left_panel_link" href="/taglist/"><div class="left_panel_widget_title">TAG</div></a>
+<a class = "left_panel_link" href="/blog/taglist/"><div class="left_panel_widget_title">TAG</div></a>
 <div class="left_panel_widget_content">
 <ul>
 {%for tag in allTags%}<li><a class="index_tag_list" href="{{tag.get_absolute_url}}">{{tag.tagName}}</a></li>{% endfor %}
@@ -71,13 +71,13 @@
 
 <!-- ARCHIVE -->
 <div class="left_panel_widget">
-<a class = "left_panel_link" href="/archive/"><div class="left_panel_widget_title">ARCHIVE</div></a>
+<a class = "left_panel_link" href="/blog/archive/"><div class="left_panel_widget_title">ARCHIVE</div></a>
 <div class="left_panel_widget_content">
 </div>
 </div>
 
 <div class="left_panel_widget">
-	<a class = "left_panel_link" href="/contact/"><div class="left_panel_widget_title">CONTACT</div></a>
+	<a class = "left_panel_link" href="/blog/contact/"><div class="left_panel_widget_title">CONTACT</div></a>
     <div class="left_panel_widget_content">
     </div>
 </div>

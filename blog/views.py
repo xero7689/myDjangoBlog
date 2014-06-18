@@ -1,11 +1,9 @@
 from django.shortcuts import render, get_object_or_404,  HttpResponseRedirect
 from blog.models import Post, postTag
-from work.models import Image
 from django.utils import timezone
 from django.views.generic.dates import YearArchiveView, MonthArchiveView
 from django.views.generic import ListView
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
-from blog2.settings import MEDIA_URL
 from blog.forms import ContactForm
 from django.views.generic.edit import FormView
 from calendar import month_name
@@ -54,13 +52,7 @@ class tagList(ListView):
 def about(request):
     return render(request, 'blog/about.html')
 
-class work(ListView):
-	model = Image
-	image = Image.objects.all()
-	template_name = "work/work.html"
-	
-	def get(self, request, *args, **kwargs):
-		return render(request, self.template_name, {"image": self.image,"media_url": MEDIA_URL})
+
 
 class archiveList(ListView):
 	model = Post
